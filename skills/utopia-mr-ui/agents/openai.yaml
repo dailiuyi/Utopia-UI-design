@@ -1,0 +1,4 @@
+interface:
+  display_name: "手机 MR 决斗 UI"
+  short_description: "将黑黄攻壳主题海报转成 Unity 手机决斗界面，复用视觉与交互规范"
+  default_prompt: "使用 $utopia-mr-ui 为当前 Unity 手机 MR 决斗项目设计或实现中文界面，沿用黑黄海报风格、竖屏准备与横屏战斗，并保留未定的操作模块。"
