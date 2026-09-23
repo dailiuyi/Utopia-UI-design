@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "utopia-mr-ui",
   "status": "proposed-design-baseline",
-  "note": "自定义设计数据，不是 Unity 可直接导入的主题或 W3C Design Tokens 标准文件。数值为建议起点，不是海报精确取色。",
+  "note": "以《攻壳机动队》1995 剧场版气质为起点的项目自定义设计数据，非官方色表或逐帧取色，非 Unity 可直接导入主题或 W3C 标准文件。",
   "units": {
     "layout": "reference-canvas-unit",
     "font": "reference-canvas-unit",
@@ -11,21 +11,32 @@
     "note": "Canvas 单位不等于屏幕像素、iOS pt 或 Android dp；按实际 UI 缩放和设备度量校准。"
   },
   "colors": {
-    "background": "#090A08",
-    "surface": "#17180F",
-    "surfaceRaised": "#242518",
-    "brand": "#E6D300",
-    "brandPressed": "#C9B900",
-    "onBrand": "#101108",
-    "textPrimary": "#F5F1D6",
-    "textSecondary": "#C6C4AE",
-    "borderStrong": "#A89D2B",
-    "borderSubtle": "#55533B",
-    "danger": "#FF7868",
-    "disabledSurface": "#34362B",
-    "disabledText": "#B7BAA5"
+    "background": "#080F12",
+    "surface": "#101D23",
+    "surfaceRaised": "#1A2B31",
+    "brand": "#83C7A1",
+    "brandPressed": "#62A987",
+    "onBrand": "#081611",
+    "accent": "#6DAAB1",
+    "textPrimary": "#DCE7E3",
+    "textSecondary": "#9DAFAD",
+    "borderStrong": "#507D79",
+    "borderSubtle": "#30474C",
+    "warning": "#C9A461",
+    "danger": "#D97970",
+    "disabledSurface": "#26343A",
+    "disabledText": "#8FA09F"
   },
-  "spacing": [4, 8, 12, 16, 24, 32, 48, 64],
+  "spacing": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64
+  ],
   "geometry": {
     "cutSmall": 8,
     "cutLarge": 16,
@@ -36,34 +47,84 @@
     "safeAreaInnerPadding": 24
   },
   "typography": {
-    "display": {"familyRole": "licensed-cjk-serif-bold", "size": 72, "lineHeightRatio": 1.15},
-    "title": {"familyRole": "licensed-cjk-serif-bold", "size": 48, "lineHeightRatio": 1.2},
-    "body": {"familyRole": "licensed-cjk-sans", "size": 32, "lineHeightRatio": 1.5},
-    "label": {"familyRole": "licensed-cjk-sans-medium", "size": 28, "lineHeightRatio": 1.25},
-    "metadata": {"familyRole": "licensed-cjk-sans", "size": 24, "lineHeightRatio": 1.3},
-    "numeric": {"familyRole": "tabular-or-monospace", "size": 40, "lineHeightRatio": 1.1},
+    "display": {
+      "familyRole": "licensed-cjk-sans-bold",
+      "size": 72,
+      "lineHeightRatio": 1.15
+    },
+    "title": {
+      "familyRole": "licensed-cjk-sans-medium",
+      "size": 48,
+      "lineHeightRatio": 1.2
+    },
+    "body": {
+      "familyRole": "licensed-cjk-sans",
+      "size": 32,
+      "lineHeightRatio": 1.5
+    },
+    "label": {
+      "familyRole": "licensed-cjk-sans-medium",
+      "size": 28,
+      "lineHeightRatio": 1.25
+    },
+    "metadata": {
+      "familyRole": "licensed-cjk-sans",
+      "size": 24,
+      "lineHeightRatio": 1.3
+    },
+    "numeric": {
+      "familyRole": "tabular-or-monospace",
+      "size": 40,
+      "lineHeightRatio": 1.1
+    },
     "note": "尺寸属于下方参考画布，不能直接当作移动端可读性标准；metadata 不承载关键提示。根据真机显示尺寸和语言扩展调整。"
   },
   "layout": {
-    "portraitReference": {"width": 1080, "height": 1920},
-    "landscapeReference": {"width": 1920, "height": 1080},
+    "portraitReference": {
+      "width": 1080,
+      "height": 1920
+    },
+    "landscapeReference": {
+      "width": 1920,
+      "height": 1080
+    },
     "battleTopHudMaxHeightRatio": 0.18,
-    "battleBottomControlsMaxHeightRatio": 0.30,
+    "battleBottomControlsMaxHeightRatio": 0.3,
     "note": "比例是构图起点，不是硬约束；16:9 与更长屏幕独立检查，角色和关键场景不得被装饰或模块遮挡。参考画布是两套布局的计量基准，不要求运行时强行切换 Canvas Scaler。"
   },
-  "motionMs": {"press": 120, "panel": 200, "phase": 320, "scanCycle": 2200},
+  "motionMs": {
+    "press": 120,
+    "panel": 200,
+    "phase": 320,
+    "scanCycle": 2200
+  },
   "effects": {
-    "cameraTextBackingOpacityStart": 0.90,
-    "menuLineArtOpacityStart": 0.10,
+    "cameraTextBackingOpacityStart": 0.9,
+    "menuLineArtOpacityStart": 0.1,
     "battleLineArtOpacity": 0,
     "fullScreenBlurByDefault": false,
     "fullScreenBloomByDefault": false,
     "reducedMotionRemovesDecorativeLoops": true
   },
   "touchGuidance": {
-    "iosMinimumTarget": {"width": 44, "height": 44, "unit": "pt"},
-    "androidMinimumTarget": {"width": 48, "height": 48, "unit": "dp"},
+    "iosMinimumTarget": {
+      "width": 44,
+      "height": 44,
+      "unit": "pt"
+    },
+    "androidMinimumTarget": {
+      "width": 48,
+      "height": 48,
+      "unit": "dp"
+    },
     "note": "这是平台建议触摸尺度，不能将值直接填进 RectTransform。通过 UI 缩放、平台屏幕信息和真机检查校准，避免仅凭不可靠的 Screen.dpi 推算。"
   },
-  "controlModule": {"selected": "unspecified", "candidates": ["direct", "command", "spectator"]}
+  "controlModule": {
+    "selected": "unspecified",
+    "candidates": [
+      "direct",
+      "command",
+      "spectator"
+    ]
+  }
 }
